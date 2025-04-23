@@ -1,3 +1,4 @@
 {
-  "host": "https://api.openai.com"
+  "host": "192.168.78.23",
+  "port":3000
 }
