@@ -6,6 +6,15 @@
     <title>Document</title>
   </head>
   <body>
-    Hello World!
+    <script>
+      fetch("/meta.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const preEl = document.createElement("pre");
+          preEl.textContent = JSON.stringify(data, null, 2);
+          document.body.appendChild(preEl);
+        })
+        .catch((error) => console.error("Error fetching meta.json:", error));
+    </script>
   </body>
 </html>
